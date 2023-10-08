@@ -16,7 +16,7 @@ The project is a basic book review app developed using Django. The following fea
 
 ## Security Flaws
 
-The app presents multiple security vulnerabilities, aligning with the [OWASP Top Ten](https://owasp.org/www-project-top-ten/) list of prevalent security risks.
+The app presents multiple security vulnerabilities, aligning with the [OWASP Top Ten](https://owasp.org/www-project-top-ten/) list of prevalent security risks. A detailed examination of these vulnerabilities is provided [here](./essay.md).
 
 ## Installation
 
