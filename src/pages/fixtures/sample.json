@@ -1,0 +1,44 @@
+[
+  {
+    "model": "pages.user",
+    "pk": "Alice",
+    "fields": {
+      "username": "Alice",
+      "password": "secret"
+    }
+  },
+  {
+    "model": "pages.user",
+    "pk": "Bob",
+    "fields": {
+      "username": "Bob",
+      "password": "secret"
+    }
+  },
+  {
+    "model": "pages.review",
+    "pk": 1,
+    "fields": {
+      "book_title": "A Brief History of Time",
+      "book_author": "Stephen Hawking",
+      "rating": 5,
+      "review_text": "\"A Brief History of Time\" by Stephen Hawking is a captivating exploration of the cosmos, from the vastness of the universe to the subatomic world of quantum mechanics. With remarkable clarity, Hawking delves into complex topics such as black holes, the nature of time, and the origin of the universe, making them accessible to the non-scientist. Though some concepts may challenge the layperson, Hawking's eloquent prose and insightful analogies make this journey both enlightening and engaging. It's a must-read for anyone curious about the fundamental mysteries of our universe.",
+      "user": "Alice",
+      "created_at": "2023-10-07T12:34:56Z",
+      "updated_at": "2023-10-07T12:34:56Z"
+    }
+  },
+  {
+    "model": "pages.review",
+    "pk": 2,
+    "fields": {
+      "book_title": "The Great Gatsby",
+      "book_author": "F. Scott Fitzgerald",
+      "rating": 4,
+      "review_text": "A classic piece of literature that paints a vivid picture of the Roaring Twenties. Fitzgerald's portrayal of the disillusionment and excess of that era is both intriguing and heartbreaking. Every character, from Jay Gatsby to Daisy Buchanan, is deeply flawed yet utterly compelling. The writing style is rich and poetic, making it a joy to read.",
+      "user": "Bob",
+      "created_at": "2023-10-08T07:18:27Z",
+      "updated_at": "2023-10-08T09:27:30Z"
+    }
+  }
+]

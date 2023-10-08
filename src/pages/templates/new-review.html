@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}
+New review
+{% endblock %}
+
+{% block content %}
+<h1>Write a book review</h1>
+
+{% include "_review-form.html" with endpoint="/reviews/new" action="new" %}
+
+{% endblock %}

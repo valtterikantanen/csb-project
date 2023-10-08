@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Book reviews
+{% endblock %}
+
+{% block content %}
+<h1>Book reviews</h1>
+
+{% if reviews %}
+<div class="reviews-container">
+  {% for review in reviews %}
+  <div class="review-item">
+    {% if review.user.username == request.session.user %}
+      <div class="edit-review-link"><a href="/reviews/{{ review.id }}/edit">Edit</a></div>
+    {% endif %}
+    <div class="book-title">{{ review.book_title }}</div>
+    <div class="author-name">{{ review.book_author }}</div>
+    <div class="stars-container">
+      {% for _ in review.rating|get_range %}
+        <img src="{% static 'star.png' %}" alt="My image" width="25" height="25">
+      {% endfor %}
+    </div>
+    <div class="review-text">{{ review.review_text }}</div>
+    <div class="review-user">
+      Review created by {{ review.user.username }} on {{ review.created_at|date:"F j, Y" }}, at {{ review.created_at|time:"H:i" }}.
+      {% if review.updated_at|date:"r" != review.created_at|date:"r" %}
+        Edited on {{ review.updated_at|date:"F j, Y" }}, at {{ review.updated_at|time:"H:i" }}.
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% else %}
+<p>There are no reviews yet.</p>
+{% endif %}
+
+{% endblock %}
+
+{% block footer %}
+  <div>Star icon by <a href="https://www.freepik.com/free-vector/start_2900814.htm#query=star&position=2">rawpixel.com</a> on Freepik</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<h1>Welcome to the Book Review App{% if request.session.user %}, {{request.session.user}}{% endif %}!</h1>
+<p>Share your thoughts on your favorite books and discover new ones to read.</p>
+
+{% if request.session.user %}
+  <p>Would you like to...
+  <ul class="action-list">
+    <li><a href="/reviews">read reviews</a>?</li>
+    <li><a href="/reviews/new">write a new book review</a>?</li>
+    <li><a href="/logout">log out</a>?</li>
+  </ul>
+  </p>
+{% else %}
+  <p>Get started by <a href="/sign-up">signing up</a> or <a href="/login">logging in</a>.</p>
+{% endif %}
+
+{% endblock %}

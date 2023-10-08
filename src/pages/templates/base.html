@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}{% endblock %} – Book review app</title>
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+
+<body>
+  <header>
+    <ul class="navbar">
+      <li><a href="/">Home</a></li>
+      {% if request.session.user %}
+        <li><a href="/reviews">Book reviews</a></li>
+        <li><a href="/reviews/new">New review</a></li>
+        <li><a href="/logout">Log out</a></li>
+      {% else %}
+        <li><a href="/sign-up">Sign up</a></li>
+        <li><a href="/login">Log in</a></li>
+      {% endif %}
+    </ul>
+  </header>
+
+  <div class="container">
+    {% if messages %}
+      {% for message in messages %}
+        <p{% if message.tags %} class="message {{ message.tags }}" {% endif %}>{{ message }}</p>
+      {% endfor %}
+    {% endif %}
+
+    {% block content %}{% endblock %}
+  </div>
+
+  <footer>
+    {% block footer %}{% endblock %}
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --bold-font-weight: 600;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  margin: 64px auto 0 auto;
+  max-width: 960px;
+  min-height: calc(100vh - 148px);
+}
+
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: hsl(0, 0%, 20%);
+  display: flex;
+}
+
+.navbar > li {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  background-color: hsl(0, 0%, 10%);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 20px 0;
+}
+
+label {
+  font-weight: var(--bold-font-weight);
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  padding: 5px;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  font-size: inherit;
+  font-weight: var(--bold-font-weight);
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid hsl(220, 100%, 50%);
+  background-color: hsl(220, 100%, 50%);
+  color: white;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background-color: hsl(220, 100%, 40%);
+}
+
+select:invalid,
+option.placeholder {
+  color: hsl(0, 0%, 70%);
+}
+
+option {
+  color: black;
+}
+
+h1 {
+  margin: 0;
+}
+
+footer {
+  position: relative;
+  padding: 5px;
+  font-size: 0.9rem;
+  color: hsl(0, 0%, 60%);
+}
+
+.message {
+  font-weight: var(--bold-font-weight);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.message.error {
+  background-color: hsl(0, 100%, 85%);
+  border: 1px solid hsl(0, 100%, 30%);
+  color: hsl(0, 100%, 30%);
+}
+
+.message.success {
+  background-color: hsl(120, 100%, 85%);
+  border: 1px solid hsl(120, 100%, 30%);
+  color: hsl(120, 100%, 30%);
+}
+
+.reviews-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.review-item {
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.book-title {
+  font-size: 1.2rem;
+  font-weight: var(--bold-font-weight);
+  color: #333;
+}
+
+.author-name {
+  color: #666;
+}
+
+.rating {
+  background-color: #ffd700;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-weight: bold;
+  color: #444;
+}
+
+.review-text {
+  margin: 20px 0;
+}
+
+.review-user {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.edit-review-link {
+  position: relative;
+}
+
+.edit-review-link a {
+  position: absolute;
+  text-decoration: none;
+  right: 0;
+  top: 0;
+}
+
+.stars-container {
+  height: 25px;
+  margin: 10px 0;
+}
+
+.action-list > li {
+  margin-bottom: 10px;
+}
